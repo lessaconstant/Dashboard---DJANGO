@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+  <!--BODY-->
+  <div class="container mt-4">
+    <div class="card text-bg-dark">
+        <img src="{% static 'image/white_page.jpg' %}" class="img-fluid" style="max-height: 670px;" alt="...">
+        <div class="card-img-overlay d-flex align-items-center text-center text-black">
+            <div class="w-100">
+                <h5 class="card-title">Casas para Aluguel!</h5>
+                <p class="card-text">
+                  Explore nosso dashboard de aluguel de casas e descubra uma experiência simplificada para encontrar a casa perfeita para você. 
+                  Com uma interface intuitiva, oferecemos ferramentas poderosas para filtrar e visualizar propriedades disponíveis, 
+                  garantindo que você possa tomar decisões informadas ao escolher a próxima casa para alugar. 
+                  Navegue com facilidade, visualize detalhes relevantes e encontre o lar ideal que atenda às suas necessidades e estilo de vida.
+                </p>
+                <a type="button" class="btn btn-primary" href="{% url 'dashboards' %}">Acesse!</a>
+            </div>
+        </div>
+    </div>
+</div>
+  <!--BODY-->
+      
+{% endblock %}
