@@ -1,0 +1,84 @@
+/* Estilos para a barra de navegação */
+#header {
+    background-color: #3498db; /* Azul escuro */
+    height: 70px;
+}
+
+.navbar-brand {
+    color: #fff; /* Cor do texto para a marca da navegação */
+}
+
+.navbar-brand:hover {
+    color: #ecf0f1; /* Cor do texto ao passar o mouse sobre a marca da navegação */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 2560px;
+}
+
+
+#main-content {
+    background-image: url("../image/graphic.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh; /* 100% da altura da viewport (janela do navegador) */
+    padding: 20px;
+    color: #fff;
+}
+
+
+
+.card {
+    height: 480px;
+    background-color: #ecf0f1; /* Cor de fundo para o cartão */
+    border: none; /* Remover borda do cartão */
+    border-radius: 15px; /* Adicionar borda arredondada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionar sombra sutil */
+    margin-top: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainpage_card{
+    margin-top: 10rem;
+    height: 170px;
+}
+
+.card-title {
+    color: #3498db; /* Cor do título do cartão */
+}
+
+.card-text {
+    color: #333; /* Cor do texto do cartão */
+}
+
+.btn-primary {
+    background-color: #3498db; /* Cor de fundo do botão primário */
+    border-color: #3498db; /* Cor da borda do botão primário */
+    position:absolute;
+    bottom: 23px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; /* Cor de fundo do botão primário ao passar o mouse sobre */
+    border-color: #2980b9; /* Cor da borda do botão primário ao passar o mouse sobre */
+    color: #fff; /* Cor do texto ao passar o mouse sobre o botão primário */
+}
+
+/* Estilos para o rodapé */
+#footer {
+    margin-top: 200px;
+    justify-content: center;
+    background-color: black;
+    height: 45px;
+    /* padding: auto; */
+    width: 1550px;
+}
