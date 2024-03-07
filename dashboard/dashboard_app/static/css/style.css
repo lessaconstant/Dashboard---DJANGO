@@ -1,15 +1,15 @@
-/* Estilos para a barra de navegação */
+
 #header {
-    background-color: #3498db; /* Azul escuro */
+    background-color: #3498db;
     height: 70px;
 }
 
 .navbar-brand {
-    color: #fff; /* Cor do texto para a marca da navegação */
+    color: #fff;
 }
 
 .navbar-brand:hover {
-    color: #ecf0f1; /* Cor do texto ao passar o mouse sobre a marca da navegação */
+    color: #ecf0f1; 
 }
 
 html, body {
@@ -28,7 +28,7 @@ html, body {
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh; /* 100% da altura da viewport (janela do navegador) */
+    height: 90vh; 
     padding: 20px;
     color: #fff;
 }
@@ -37,10 +37,10 @@ html, body {
 
 .card {
     height: 480px;
-    background-color: #ecf0f1; /* Cor de fundo para o cartão */
-    border: none; /* Remover borda do cartão */
-    border-radius: 15px; /* Adicionar borda arredondada */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adicionar sombra sutil */
+    background-color: #ecf0f1;
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     margin-top: 2rem;
     max-width: 600px;
     margin-left: auto;
@@ -53,32 +53,31 @@ html, body {
 }
 
 .card-title {
-    color: #3498db; /* Cor do título do cartão */
+    color: #3498db; 
 }
 
 .card-text {
-    color: #333; /* Cor do texto do cartão */
+    color: #333; 
 }
 
 .btn-primary {
-    background-color: #3498db; /* Cor de fundo do botão primário */
-    border-color: #3498db; /* Cor da borda do botão primário */
+    background-color: #3498db; 
+    border-color: #3498db; 
     position:absolute;
     bottom: 23px;
 }
 
 .btn-primary:hover {
-    background-color: #2980b9; /* Cor de fundo do botão primário ao passar o mouse sobre */
-    border-color: #2980b9; /* Cor da borda do botão primário ao passar o mouse sobre */
-    color: #fff; /* Cor do texto ao passar o mouse sobre o botão primário */
+    background-color: #2980b9; 
+    border-color: #2980b9; 
+    color: #fff; 
 }
 
-/* Estilos para o rodapé */
+
 #footer {
     margin-top: 200px;
     justify-content: center;
     background-color: black;
     height: 45px;
-    /* padding: auto; */
     width: 1550px;
 }

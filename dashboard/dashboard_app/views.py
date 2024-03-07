@@ -25,4 +25,13 @@ def mainpage(request):
 def dashboards(request):
     graphics = get_graphic()
     return render(request, 'dashboards.html', {'graphics' : graphics})
+
+def detail_dashboard(request, id):
+    graphics = get_graphic()
+    for graphic in graphics:
+        if graphic['id'] == id:
+            return render(request, 'detail_dashboard.html')
+
 # Create your views here.
+
+

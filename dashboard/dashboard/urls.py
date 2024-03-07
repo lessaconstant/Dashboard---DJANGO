@@ -20,11 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from dashboard_app.views import mainpage
 from dashboard_app.views import dashboards
+from dashboard_app.views import detail_dashboard
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainpage),
-    path('/dashboards', dashboards, name='dashboards')
+    path('/dashboards', dashboards, name='dashboards'),
+    path('/dashboard/<int:id>', detail_dashboard, name='detail_dashboard')
 ]
 
 if settings.DEBUG:
