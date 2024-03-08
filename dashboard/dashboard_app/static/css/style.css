@@ -36,7 +36,7 @@ html, body {
 
 
 .card {
-    height: 480px;
+    height: 520px;
     background-color: #ecf0f1;
     border: none; 
     border-radius: 15px; 
@@ -63,8 +63,7 @@ html, body {
 .btn-primary {
     background-color: #3498db; 
     border-color: #3498db; 
-    position:absolute;
-    bottom: 23px;
+    margin-top: 10px;  /* Adiciona margem na parte superior do botão */
 }
 
 .btn-primary:hover {

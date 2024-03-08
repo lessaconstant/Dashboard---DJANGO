@@ -4,19 +4,20 @@
 
 {% block content %}
 <div class="container" id="dashboard-content">
-  <div class="row">
-      {% for graphic in graphics %}
-          <div class="col-md-4 mb-4">
-              <div class="card">
-                  <img src="{% static graphic.url_img %}" class="card-img-top" alt="Graph 1">
-                  <div class="card-body">
-                      <p class="card-text">{{graphic.descricao}}</p>
-                  </div>
-                  <a href="{% url 'detail_dashboard' %}" class="btn btn-primary">Detalhes</a>
-              </div>
-          </div>
-      {% endfor %}
-  </div>
+    <div class="row">
+        {% for graphic in graphics %}
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="{% static graphic.url_img %}" class="card-img-top" alt="Graph 1">
+                    <div class="card-body">
+                        <p class="card-text">{{graphic.descricao}}</p>
+                        <a href="{% url 'detail_dashboard' id=graphic.id %}" class="btn btn-primary" id="button_graphic">Detalhes</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </div>
+
 
 {% endblock %}
