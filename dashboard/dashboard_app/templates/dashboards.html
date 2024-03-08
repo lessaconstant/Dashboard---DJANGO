@@ -11,7 +11,7 @@
                     <img src="{% static graphic.url_img %}" class="card-img-top" alt="Graph 1">
                     <div class="card-body">
                         <p class="card-text">{{graphic.descricao}}</p>
-                        <a href="{% url 'detail_dashboard' id=graphic.id %}" class="btn btn-primary" id="button_graphic">Detalhes</a>
+                        <a href="{% url 'detail_dashboard' graphic.id %}" class="btn btn-primary" id="button_graphic">Detalhes</a>
                     </div>
                 </div>
             </div>
