@@ -1,7 +1,21 @@
 {% extends 'base.html' %}
 
 {% load static %}
-
 {% block content %}
+
+<div class="card mb-3" id="detailed_graphic">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{% static graphic.url_img %}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{graphic.titulo}}</h5>
+          <p class="card-text">{{graphic.detalhamento}}</p>
+          <p class="card-text" id="hiperlink_detailed"><small class="text-body-secondary"><a href="#">Clique aqui</a> para verificar quais imóveis satisfaz essas condições na sua cidade</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
