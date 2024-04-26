@@ -1,21 +1,86 @@
 {% extends 'base.html' %}
 
-{% load static %}
 {% block content %}
-
-<div class="card mb-3" id="detailed_graphic">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <img src="{% static graphic.url_img %}" class="img-fluid rounded-start" alt="...">
+<div class="container-fluid" id="detail_page">
+  <!-- Descrição do dashboard -->
+  <div class="row mb-4">
+      <div class="col-lg-12">
+          <div class="card bg-light">
+              <div class="card-body">
+                  <p class="card-text">
+                      {{ graph_data.description }}
+                  </p>
+              </div>
+          </div>
       </div>
-      <div class="col-md-8">
-        <div class="card-body">
-          <h5 class="card-title">{{graphic.titulo}}</h5>
-          <p class="card-text">{{graphic.detalhamento}}</p>
-          <p class="card-text" id="hiperlink_detailed"><small class="text-body-secondary"><a href="#">Clique aqui</a> para verificar quais imóveis satisfazem essas condições na sua cidade.</small></p>
-        </div>
-      </div>
-    </div>
   </div>
+  <!-- Gráfico principal -->
+  <div class="row">
+      <div class="col-lg-12">
+          <div class="card mb-4"> <!-- Adicionando a classe mb-4 aqui -->
+              <div class="card-header bg-primary text-white d-flex justify-content-center align-items-center">
+                  <h5 class="card-title mb-0">{{ graph_data.id }}</h5>
+              </div>                
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div id="{{ graph_data.tag_id }}"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Legenda -->
+  <div class="row" id="legend">
+      <div class="col-lg-12">
+          <div class="card mb-4">
+              <div class="card-header bg-secondary text-white">
+                  <h5 class="card-title mb-0">Legenda</h5>
+              </div>
+              <div class="card-body">
+                  <p>{{ graph_data.legend }}</p>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
 
+
+<script>
+google.charts.load('current', { packages: ['corechart'] });
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var jsonData = JSON.parse('{{ graph_data.data | safe }}');
+    var data = google.visualization.arrayToDataTable(jsonData);
+
+    
+    var options = {
+        title: '{{ graph_data.title }}',
+        chartArea: { width: '90%', height: '70%' },
+        legend: { position: 'none' },
+        hAxis: {
+            title: '{{ graph_data.hAxis }}'
+        },
+        vAxis: {
+            title: '{{ graph_data.vAxis }}'
+        },
+        color: {},
+        theme : '{{ graph_data.theme }}'
+    };
+    
+    
+    var chartWrapper = new google.visualization.ChartWrapper({
+        chartType: '{{ graph_data.chart_type }}',
+        containerId: '{{ graph_data.tag_id }}',
+        dataTable: data,
+        options: options
+    });
+
+    chartWrapper.draw();
+    console.log('{{ graph_data.hue }}')
+}
+
+</script>
 {% endblock %}

@@ -3,21 +3,68 @@
 {% load static %}
 
 {% block content %}
-<div class="container" id="dashboard-content">
+<div class="container-fluid" id="graphs">
+    <div class="row mb-4">
+        <div class="col-lg-12">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <p class="card-text">
+                        Este dashboard apresenta dados relacionados ao Exame Nacional do Ensino Médio (Enem) de 2022, um período marcado pelos desafios enfrentados em todo o mundo devido à pandemia de COVID-19. Durante esse ano, a realização do Enem representou não apenas um teste de conhecimento para os estudantes, mas também uma avaliação do impacto da pandemia na educação e na sociedade em geral. Os números apresentados neste dashboard refletem não apenas a participação dos candidatos, mas também podem oferecer insights valiosos sobre como a pandemia influenciou as inscrições, os padrões de participação e a distribuição geográfica dos candidatos. Ao analisar esses dados, os gestores educacionais, os pesquisadores e os formuladores de políticas podem obter uma compreensão mais profunda dos desafios enfrentados pelos estudantes durante esse período excepcional, bem como identificar áreas que requerem atenção e intervenção específicas para garantir a equidade e o acesso à educação.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="row">
-        {% for graphic in graphics %}
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <img src="{% static graphic.url_img %}" class="card-img-top" alt="Graph 1">
-                    <div class="card-body">
-                        <p class="card-text">{{graphic.descricao}}</p>
-                        <a href="{% url 'detail_dashboard' graphic.id %}" class="btn btn-primary" id="button_graphic">Detalhes</a>
+        <div class="col-lg-12" id="main_graphic">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white d-flex justify-content-center align-items-center">
+                    <h5 class="card-title mb-0">Quantidade de inscritos em cada região</h5>
+                </div>                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div id="brazil_chart"></div>
+                        </div>
+                        <div class="col-lg-2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-subtitle mb-2 text-muted">Total de inscritos</h6>
+                                    <p class="card-text">66933</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for graph_id, graph_data in graphs.items %}
+        <div class="col-lg-4">
+            <div class="card mb-4">
+                <div class="card-header bg-secondary text-white">
+                </div>
+                <div class="card-body d-flex flex-column align-items-center" id="barchart_container">
+                    <div id="{{graph_data.containerId}}"></div>
+                    <p>{{ graph_data.title }}</p>
+                    <a href="{% url 'detail_dashboard' graph_data.tag_id %}" class="btn btn-primary mt-auto">Detalhe</a>
+                </div>
+            </div>
+        </div>
         {% endfor %}
     </div>
 </div>
+<script>
+var dataGraph1 = '{{ graphs.graph1.data | safe }}'
+dataGraph1 = JSON.parse(dataGraph1)
 
+var hue2 = '{{ graphs.graph2.hue }}'
+var dataGraph2 = '{{ graphs.graph2.data | safe }}'
+dataGraph2 = JSON.parse(dataGraph2)
+hue2 = JSON.parse(hue2)
 
+var dataGraph3 = '{{ graphs.graph3.data | safe }}'
+dataGraph3 = JSON.parse(dataGraph3)
+</script>
 {% endblock %}

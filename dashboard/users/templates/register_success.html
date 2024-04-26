@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card mt-5">
+                <div class="card-body text-center">
+                    <h1 class="card-title">Cadastro Efetuado com Sucesso</h1>
+                    <p class="card-text">Seu cadastro foi realizado com sucesso!</p>
+                    <a href="{% url 'login' %}" class="btn btn-primary">Ir para a página de Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

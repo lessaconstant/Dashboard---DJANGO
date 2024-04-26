@@ -1,0 +1,127 @@
+/* Estilos para o cabeçalho */
+#header {
+    background-color: #3498db;
+    height: 70px;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.navbar-brand:hover {
+    color: #ecf0f1; 
+}
+
+/* Estilos gerais */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 100%;
+}
+
+/* Estilos para os cards */
+.card {
+    height: 520px;
+    background-color: #ecf0f1;
+    border: none; 
+    border-radius: 15px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-title {
+    color: #3498db; 
+}
+
+.card-text {
+    color: #333; 
+}
+
+/* Estilos para os botões */
+.btn-primary {
+    background-color: #3498db; 
+    border-color: #3498db; 
+    margin-top: 10px;  /* Adiciona margem na parte superior do botão */
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; 
+    border-color: #2980b9; 
+    color: #fff; 
+}
+
+/* Estilos para o rodapé */
+#footer {
+    background-color: #24242c;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center; /* Centralize o conteúdo horizontalmente */
+}
+
+
+.navbar-text {
+    display: flex;
+    align-items: center; /* Centralizar o texto verticalmente */
+}
+
+.navbar-text span {
+    margin: 0 auto; /* Centralizar o texto horizontalmente */
+    color: white; /* Definir a cor do texto */
+    font-size: 14px; /* Definir o tamanho da fonte */
+}
+
+/* Estilos específicos para a página principal */
+#main-content {
+    background-image: url("../image/graphic.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 83vh; /* Definir a altura para cobrir a tela inteira */
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center; /* Centralizar o conteúdo verticalmente */
+    align-items: center; /* Centralizar o conteúdo horizontalmente */
+    max-width: 100%;
+    padding-bottom: 60px;
+}
+
+#mainpage_card {
+    background-color: rgba(236, 240, 241, 0.8); /* Adicionar uma cor de fundo ao card para melhor legibilidade */
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px; /* Definir a largura máxima do card */
+    width: 100%; /* Fazer o card ocupar toda a largura disponível */
+}
+
+
+.card-body {
+    padding-bottom: 20px; /* Adicione o preenchimento ao corpo do cartão conforme necessário */
+}
+
+#main_graphic {
+    margin: auto;
+    max-width: 85%;
+};
+
+#detail_page {
+    height: 37.7rem;
+}
+
+#graphs{
+    padding-bottom: 3%;
+}
+
+#legend {
+    padding-bottom: 3%;
+}
+
+

@@ -3,14 +3,18 @@
 {% load static %}
 
 {% block content %}
-    <div class="container" id="main-content">
+    <div class="container-fluid" id="main-content">
         <div class="card" id="mainpage_card">
             <div class="card-body">
                 <h5 class="card-title">Bem-vindo ao Dashboard!</h5>
                 <p class="card-text">
                     Explore todas as incríveis funcionalidades do nosso dashboard. Estamos aqui para tornar sua experiência a melhor possível.
                 </p>
-                <a href="{% url 'dashboards' %}" class="btn btn-primary">Saiba mais</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'dashboards' %}" class="btn btn-primary">Acesse</a>
+                {% else %}
+                    <a href="{% url 'register' %}" class="btn btn-primary">Registre-se</a>
+                {% endif %}
             </div>
         </div>
     </div>
