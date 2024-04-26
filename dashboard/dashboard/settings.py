@@ -109,8 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  # Backend padrão para autenticação por nome de usuário e senha
-    'django.contrib.auth.backends.AllowAllUsersModelBackend',  # Backend para autenticar com email
+    'django.contrib.auth.backends.ModelBackend',  
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',  
 ]
 
 

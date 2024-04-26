@@ -114,7 +114,6 @@ def data_extract(request):
         "legend": "Legenda: \n\u2022 tipo_escola: Se a escola é particular ou pública \n\u2022 CN: Ciências da Natureza \n\u2022 CH: Ciências Humanas \n\u2022 LC: Linguagens e Códigos \n\u2022 MT: Matemática",
         "theme" : "material"
     },
-    # Adicione mais gráficos conforme necessário
 }
 
     request.session['graphs'] = graphs

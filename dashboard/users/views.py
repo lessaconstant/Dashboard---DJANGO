@@ -21,7 +21,7 @@ def register(request):
         else:
             user = User.objects.create_user(username=username, email=email, password=password)
             user.save()
-            return redirect(reverse('register_success'))  # Redirecionar para a página de sucesso de cadastro
+            return redirect(reverse('register_success')) 
 
     return render(request, 'register.html', {'error': error})
 
@@ -31,15 +31,15 @@ def login_user(request):
     if request.method == "GET":
         return render(request, 'login.html')
     elif request.method == "POST":
-        username = request.POST.get('username')  # Mudança aqui
+        username = request.POST.get('username')  
         password = request.POST.get('password')
 
-        user = authenticate(request, username=username, password=password)  # Mudança aqui
+        user = authenticate(request, username=username, password=password)  
 
 
         if user is not None:
             login(request, user)
-            return redirect('mainpage')  # Redirecionar para a página principal após o login
+            return redirect('mainpage')  
         else:
             return render(request, 'login.html', {'error': 'Credenciais de login inválidas. Por favor, tente novamente.'})
 

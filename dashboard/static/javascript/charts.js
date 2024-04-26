@@ -7,33 +7,33 @@ google.charts.load('current', {
     // Gráfico Geográfico
     var dataBrazil = google.visualization.arrayToDataTable([
         ['Estado', 'Inscritos'],
-        ['ACRE',  2500], // Acre
-        ['ALAGOAS',  7000], // Alagoas
-        ['AMAPÁ',  5000], // Amapá
-        ['AMAZONAS',  4000], // Amazonas
-        ['BAHIA',  8000], // Bahia
-        ['CEARÁ',  3000], // Ceará
-        ['DISTRITO FEDERAL',  5500], // Distrito Federal
-        ['ESPÍRITO SANTO',  8500], // Espírito Santo
-        ['GOIÁS',  4500], // Goiás
-        ['MARANHÃO',  6500], // Maranhão
-        ['MATO GROSSO',  7500], // Mato Grosso
-        ['MATO GROSSO DO SUL',  2500], // Mato Grosso do Sul
-        ['MINAS GERAIS',  9500], // Minas Gerais
-        ['PARÁ',  7200], // Pará
-        ['PARAÍBA',  4000], // Paraíba
-        ['PARANÁ',  8800], // Paraná
-        ['PERNAMBUCO',  5500], // Pernambuco
-        ['PIAUÍ',  7000], // Piauí
-        ['RIO DE JANEIRO',  9000], // Rio de Janeiro
-        ['RIO GRANDE DO NORTE',  4000], // Rio Grande do Norte
-        ['RIO GRANDE DO SUL',  8000], // Rio Grande do Sul
-        ['RONDÔNIA',  3500], // Rondônia
-        ['RORAIMA',  2500], // Roraima
-        ['SANTA CATARINA',  9000], // Santa Catarina
-        ['SÃO PAULO',  11000], // São Paulo
-        ['SERGIPE',  4500], // Sergipe
-        ['TOCANTINS',  5000] // Tocantins
+        ['ACRE',  2500], 
+        ['ALAGOAS',  7000],
+        ['AMAPÁ',  5000], 
+        ['AMAZONAS',  4000],
+        ['BAHIA',  8000], 
+        ['CEARÁ',  3000], 
+        ['DISTRITO FEDERAL',  5500], 
+        ['ESPÍRITO SANTO',  8500], 
+        ['GOIÁS',  4500], 
+        ['MARANHÃO',  6500],
+        ['MATO GROSSO',  7500],
+        ['MATO GROSSO DO SUL',  2500], 
+        ['MINAS GERAIS',  9500], 
+        ['PARÁ',  7200],
+        ['PARAÍBA',  4000],
+        ['PARANÁ',  8800], 
+        ['PERNAMBUCO',  5500], 
+        ['PIAUÍ',  7000], 
+        ['RIO DE JANEIRO',  9000],
+        ['RIO GRANDE DO NORTE',  4000], 
+        ['RIO GRANDE DO SUL',  8000], 
+        ['RONDÔNIA',  3500], 
+        ['RORAIMA',  2500], 
+        ['SANTA CATARINA',  9000],
+        ['SÃO PAULO',  11000], 
+        ['SERGIPE',  4500], 
+        ['TOCANTINS',  5000]
     ]);
   
     var optionsBrazil = {
