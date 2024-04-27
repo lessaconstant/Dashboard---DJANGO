@@ -69,8 +69,6 @@ def data_extract(request):
     query3 = [float(correlation) for correlation in query3]
     queryformated3 = [['conclusao_status', 'tipo_escola', 'CN', 'CH', 'LC', 'MT', 'REDACAO', 'MEDIA']]
     queryformated3.append(query3)    
-    print(query3)
-    print(queryformated3)
     data3 = json.dumps(queryformated3)
 
     ##########################
